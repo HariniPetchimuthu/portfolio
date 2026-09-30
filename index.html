@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Harini Petchimuthu | Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background: #fff;
+        }
+
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 12px #0001;
+        }
+
+        .navbar-brand {
+            color: #8b2942;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #444 !important;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #8b2942 !important;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .hero {
+            min-height: 90vh;
+            background: #fff7f8;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero img {
+            width: 300px;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .small-title {
+            color: #8b2942;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .hero h1 span {
+            color: #8b2942;
+        }
+
+        .hero p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .btn-main {
+            background: #8b2942;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-main:hover {
+            background: #681d31;
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: #8b2942;
+            font-weight: bold;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+        .about-text {
+            line-height: 1.9;
+            color: #555;
+        }
+
+        .info-box {
+            background: #fff7f8;
+            padding: 25px;
+            border-left: 4px solid #8b2942;
+            margin-bottom: 15px;
+        }
+
+        .skill-item {
+            margin-bottom: 22px;
+        }
+
+        .skill-item p {
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .progress {
+            height: 8px;
+            background: #eee;
+        }
+
+        .progress-bar {
+            background: #8b2942;
+        }
+
+        .edu {
+            position: relative;
+            padding-left: 30px;
+            border-left: 3px solid #e8b6c3;
+            margin-bottom: 30px;
+        }
+
+        .edu::before {
+            content: "";
+            width: 13px;
+            height: 13px;
+            background: #8b2942;
+            border-radius: 50%;
+            position: absolute;
+            left: -8px;
+            top: 5px;
+        }
+
+        .edu h5 {
+            color: #8b2942;
+            font-weight: bold;
+        }
+
+        .project {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px #00000012;
+            overflow: hidden;
+        }
+
+        .project img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h4 {
+            color: #8b2942;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #fff0f3;
+            color: #8b2942;
+            padding: 6px 12px;
+            margin: 4px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .certificate {
+            padding: 22px;
+            background: #fff7f8;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .certificate i {
+            color: #8b2942;
+            margin-right: 10px;
+        }
+
+        .contact-box {
+            text-align: center;
+            padding: 35px;
+            background: #fff7f8;
+            border-radius: 15px;
+        }
+
+        .contact-box i {
+            font-size: 25px;
+            color: #8b2942;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: #8b2942;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width:768px) {
+
+            .hero {
+                text-align: center;
+                padding: 60px 0;
+            }
+
+            .hero img {
+                width: 240px;
+                height: 290px;
+                margin-bottom: 40px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .nav-link {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#home">
+                &lt; HariniPetchimuthu &gt;
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-5 text-center">
+
+                    <img src="portfolio images/me.jpeg" alt="Harini Petchimuthu">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <p class="small-title">HELLO, I'M</p>
+
+                    <h1>
+                        <span>Harini Petchimuthu</span>
+                    </h1>
+
+                    <h4 class="mb-3">
+                        Web Developer & B.Sc. IT Student
+                    </h4>
+
+                    <p>
+                        I am a self-motivated Information Technology student
+                        interested in web development and modern technologies.
+                        I enjoy creating responsive and user-friendly websites.
+                    </p>
+
+                    <a href="#projects" class="btn-main mt-3">
+                        View My Work
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>About Me</h2>
+
+                <p>Get to know me</p>
+
+            </div>
+
+            <div class="row align-items-center">
+
+                <div class="col-md-7">
+
+                    <p class="about-text">
+
+                        Self-motivated B.Sc. IT student eager to begin a professional
+                        career in the IT industry. Aiming to utilize my technical and
+                        problem-solving skills while learning new technologies and
+                        contributing to team success.
+
+                    </p>
+
+                </div>
+
+                <div class="col-md-5">
+
+                    <div class="info-box">
+
+                        <strong>Course</strong><br>
+                        B.Sc. Information Technology
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <strong>College</strong><br>
+                        Rose Mary College of Arts and Science
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <strong>Career Interest</strong><br>
+                        Web Development & IT
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills" style="background:#fff7f8;">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>My Skills</h2>
+
+                <p>Technical skills I have developed</p>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="skill-item">
+
+                        <p>HTML5 & CSS</p>
+
+                        <div class="progress">
+
+                            <div class="progress-bar" style="width:90%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <p>Bootstrap & Tailwind CSS</p>
+
+                        <div class="progress">
+
+                            <div class="progress-bar" style="width:85%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <p>JavaScript</p>
+
+                        <div class="progress">
+
+                            <div class="progress-bar" style="width:75%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <div class="skill-item">
+
+                        <p>Python</p>
+
+                        <div class="progress">
+
+                            <div class="progress-bar" style="width:70%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <p>Java</p>
+
+                        <div class="progress">
+
+                            <div class="progress-bar" style="width:70%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <p>Git & GitHub</p>
+
+                        <div class="progress">
+
+                            <div class="progress-bar" style="width:80%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Education</h2>
+
+                <p>My academic journey</p>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-8 mx-auto">
+
+                    <div class="edu">
+
+                        <h5>B.Sc. Information Technology</h5>
+
+                        <p>
+                            Rose Mary College of Arts and Science
+                        </p>
+
+                        <small>
+                            2024 - 2027
+                        </small>
+
+                    </div>
+
+
+                    <div class="edu">
+
+                        <h5>HSC</h5>
+
+                        <p>
+                            Municipal Girls Higher Secondary School
+                        </p>
+
+                        <small>
+                            2023 - 2024 | 56.33%
+                        </small>
+
+                    </div>
+
+
+                    <div class="edu">
+
+                        <h5>SSLC</h5>
+
+                        <p>
+                            Municipal Girls Higher Secondary School
+                        </p>
+
+                        <small>
+                            2021 - 2022 | 65.4%
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURED PROJECT -->
+
+    <section id="projects" style="background:#fff7f8;">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Featured Project</h2>
+
+                <p>My web development project</p>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="row align-items-center g-0">
+
+                    <div class="col-md-5">
+
+                        <img src="project images/dairy10.jpg" alt="Dairy Products Project">
+
+                    </div>
+
+
+                    <div class="col-md-7">
+
+                        <div class="project-content">
+
+                            <h4>Dairy Products</h4>
+
+                            <p>
+
+                                A frontend website developed for displaying
+                                different dairy products in a simple,
+                                attractive and user-friendly interface.
+
+                                The website includes product sections,
+                                navigation, about and contact pages.
+
+                            </p>
+
+
+                            <span class="tag">
+                                HTML5
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                Bootstrap 5
+                            </span>
+
+                            <span class="tag">
+                                Tailwind CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <br><br>
+
+                            <a href="https://harinipetchimuthu.github.io/Project/" target="_blank" class="btn-main">
+
+                                Visit Project
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTERNSHIP & CERTIFICATES -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Experience & Achievements</h2>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <h4 class="mb-4" style="color:#8b2942">
+
+                        Internship
+
+                    </h4>
+
+
+                    <div class="certificate">
+
+                        <h5>
+                            Malar Software Solutions
+                        </h5>
+
+                        <p>
+                            Modern Web Development
+                        </p>
+
+                        <small>
+                            25 May 2026 - 15 June 2026
+                        </small>
+
+                    </div>
+
+
+                    <div class="certificate">
+
+                        <i class="fa-solid fa-award"></i>
+
+                        TECHXPO Participation
+
+                    </div>
+
+
+                    <div class="certificate">
+
+                        <i class="fa-solid fa-award"></i>
+
+                        Next-Gen Chatbot Engineering with LangChain
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <h4 class="mb-4" style="color:#8b2942">
+
+                        Certificates
+
+                    </h4>
+
+
+                    <div class="certificate">
+
+                        <i class="fa-solid fa-certificate"></i>
+
+                        Design Thinking & Digital Content Creation
+
+                    </div>
+
+
+                    <div class="certificate">
+
+                        <i class="fa-solid fa-certificate"></i>
+
+                        AI-Powered Academic Integrity Tools
+
+                    </div>
+
+
+                    <div class="certificate">
+
+                        <i class="fa-solid fa-certificate"></i>
+
+                        Oracle Cloud Infrastructure - Foundation
+
+                    </div>
+
+
+                    <div class="certificate">
+
+                        <i class="fa-solid fa-certificate"></i>
+
+                        Oracle Cloud Infrastructure - AI Foundation
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" style="background:#fff7f8;">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Contact Me</h2>
+
+                <p>
+                    Let's connect and create something meaningful
+                </p>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-5">
+
+                    <div class="contact-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <h5>Email</h5>
+
+                        <p>
+                            ppharini2007@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-5">
+
+                    <div class="contact-box">
+
+                        <i class="fa-brands fa-github"></i>
+
+                        <h5>GitHub</h5>
+
+                        <a href="https://github.com/HariniPetchimuthu/Intenship" target="_blank">
+
+                            View My GitHub
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Harini Petchimuthu | Personal Portfolio
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
